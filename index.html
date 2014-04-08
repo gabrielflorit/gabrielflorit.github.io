@@ -1,7 +1,25 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: Gabriel Florit
+---
+
+<section class='projects'>
+
+	{% for post in site.posts %}
+	<article>
+		<h6>{{ post.date | date: '%B %-d, %Y' }}</h6>
+		<h3>
+			<a href="{{post.link}}">{{post.title}}</a>
+		</h3>
+		<div class="images">
+			<a href="{{post.link}}">
+				<img class="iphone lazy" src="assets/img/blank.gif" data-src="assets/img/06snowfall-iphone.jpg" />
+			</a>
+			<a href="{{post.link}}">
+				<img class="ipad lazy" src="assets/img/blank.gif" data-src="assets/img/06snowfall-ipad.jpg" />
+			</a>
+		</div>
+	</article>
+	{% endfor %}
+
+</section>
