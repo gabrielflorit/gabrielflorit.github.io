@@ -7,6 +7,9 @@ title: Gabriel Florit
 
 	{% for post in site.posts %}
 	<article>
+		{% if post.github != nil %}
+		<a class='github' href='{{post.github}}'></a>
+		{% endif %}
 		<h6>{{ post.date | date: '%B %-d, %Y' }}</h6>
 		<h3>
 			<a href="{{post.link}}">{{post.title}}</a>
