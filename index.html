@@ -7,18 +7,10 @@ title: Gabriel Florit
 
 	{% for post in site.posts %}
 	<article>
+		<div class='image'><a href='{{post.link}}'><img src='{{post.image}}' /></a></div>
 		{% if post.github != nil %}
-		<a class='github' href='{{post.github}}'></a>
+		<div class='github'><a href='{{post.github}}'><img src='assets/img/GitHub.png' /></a></div>
 		{% endif %}
-		<h6>{{ post.date | date: '%B %-d, %Y' }}</h6>
-		<h3>
-			<a href="{{post.link}}">{{post.title}}</a>
-		</h3>
-		<div class="images">
-			<a href="{{post.link}}">
-				<img class="ipad lazy" src="{{post.largeImage}}" />
-			</a>
-		</div>
 	</article>
 	{% endfor %}
 
